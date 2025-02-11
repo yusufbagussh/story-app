@@ -1,0 +1,57 @@
+@use "utilities/variables";
+
+body {
+  font-family: variables.$font-family;
+  margin: 0;
+  padding: 0;
+  background-color: variables.$background-color;
+}
+
+.navbar {
+  background-color: variables.$primary-color;
+  padding: 1rem;
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .nav-item button {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none; /* Menghapus underline */
+    border: none; /* Menghapus border default pada button */
+    background-color: transparent; /* Pastikan background button transparan */
+
+    &:hover {
+      text-decoration: none; /* Pastikan tidak ada underline saat hover */
+      background-color: rgba(255, 255, 255, 0.1); /* Tambahkan efek hover */
+    }
+  }
+
+  .nav-item button.active {
+    font-weight: bold; /* Menebalkan teks untuk tombol yang aktif */
+    color: #ffd700; /* Warna untuk tombol yang aktif (contoh warna emas) */
+  }
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+footer {
+  background-color: variables.$background-color;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: variables.$text-color;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center; /* Memastikan item navbar diatur di tengah saat tampilan kecil */
+  }
+}
