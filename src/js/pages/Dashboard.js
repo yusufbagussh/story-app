@@ -1,5 +1,5 @@
-import data from "../data/stories.json";
-import "./components/StoryCard";
+import data from "../../data/DATA.json";
+import "../components/StoryCard";
 
 export function renderDashboard(container) {
   const title = document.createElement("h1");

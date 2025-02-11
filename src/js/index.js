@@ -1,4 +1,4 @@
-import { renderDashboard } from "./render"; // Import fungsi untuk render dashboard
+import { renderDashboard } from "./pages/Dashboard"; // Import fungsi untuk render dashboard
 import "../sass/main.scss"; // Import SCSS utama
 
 const app = document.getElementById("app");
